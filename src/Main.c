@@ -60,7 +60,8 @@ int main()
                 printf("Insira o nome do arquivo CSV: ");
                 fgets(nome_arquivo, sizeof(nome_arquivo), stdin);
                 nome_arquivo[strcspn(nome_arquivo, "\n")] = 0; // Remover o newline no final da string
-                raiz = carregarLivros(nome_arquivo, raiz);
+                printf("Carregando livros do arquivo %s...\n", nome_arquivo);
+                raiz = (No*) carregarLivros(nome_arquivo, raiz);
                 break;
             case 5:
                 printf("Livros em ordem:\n");
